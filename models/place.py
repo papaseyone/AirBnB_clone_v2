@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines the Place class."""
+"""This is the place class"""
 from sqlalchemy.ext.declarative import declarative_base
 from models.base_model import BaseModel, Base
 from sqlalchemy import Column, Table, String, Integer, Float, ForeignKey
@@ -57,7 +57,7 @@ class Place(BaseModel, Base):
     else:
         @property
         def reviews(self):
-            """ Returns a list of reviews.id """
+            """ Returns list of reviews.id """
             var = models.storage.all()
             lista = []
             result = []
@@ -73,7 +73,7 @@ class Place(BaseModel, Base):
 
         @property
         def amenities(self):
-            """ Returns a list of amenity ids """
+            """ Returns list of amenity ids """
             return self.amenity_ids
 
         @amenities.setter
